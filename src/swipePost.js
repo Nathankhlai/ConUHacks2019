@@ -1,8 +1,21 @@
+// Pulls information from database
+var current = new User ("donor", "storeName", "location");
+
+function submitData () {
+	//need to get the company/ store name here
+	let name = current.name;
+	let item = document.querySelector("#nameField").value;
+	let quantity = document.querySelector("#quantField").value;
+	var setDoc = db.collection('Donor').doc(name).set(item + ';' + quantity);
+
+
+	// write item name to database
+	// write item quantity to databases
+}
+
 // Get current user from login
 let container = document.querySelector("#swipePost");
 
-// Pulls information from database
-let current = new User ("donor", "location");
 
 if (current.userType === "donor") {
 	container.innerHTML = "";
@@ -30,8 +43,8 @@ if (current.userType === "donor") {
 	enterButton.innerHTML = "Enter";
 	
 	buttonCont.appendChild(enterButton);
-	
-	enter.addEventListener("click", submitData);
+
+	enterButton.addEventListener("click", submitData);
 
 	container.appendChild(buttonCont);
 } else {

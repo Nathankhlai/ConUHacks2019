@@ -1,6 +1,7 @@
 class User {
-	constructor (userType, location) {
+	constructor (userType, name, location) {
 		this.userType = userType;
+		this.name = name;
 		this.location = location;
 	}
 }
