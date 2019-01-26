@@ -1,0 +1,13 @@
+.inactive {
+	display: inactive !important;
+}
+
+section h3 {
+	display: flex;
+	justify-content: center;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+}
