@@ -1,13 +1,29 @@
-.inactive {
-	display: inactive !important;
-}
-
 section h3 {
 	display: flex;
 	justify-content: center;
 }
 
+body {
+	background-color: rgb(5, 188, 212);
+	overflow-y: scroll;
+}
+
+button {
+	font-size: 1em;
+
+}
+
 .menu {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 10px;
+	bottom: 0;
+	position: fixed;
+	bottom: 2%;
+	width: 96%;
+}
+
+
+.inactive {
+	display: inactive !important;
 }

@@ -1,6 +1,7 @@
 // Get current user from login
 let container = document.querySelector("#swipePost");
 
+// Pulls information from database
 let current = new User ("donor", "location");
 
 if (current.userType === "donor") {
@@ -10,6 +11,7 @@ if (current.userType === "donor") {
 	namePrompt.appendChild(document.createTextNode("Item name:"));
 	let nameField = document.createElement("input");
 	nameField.setAttribute("type","text");
+	nameField.id = "nameField";
 
 	container.appendChild(namePrompt);
 	container.appendChild(nameField);
@@ -18,9 +20,20 @@ if (current.userType === "donor") {
 	quantPrompt.appendChild(document.createTextNode("Quantity"));
 	let quantField = document.createElement("input");
 	quantField.setAttribute("type","text");
+	quantField.id = "quantField";
 
 	container.appendChild(quantPrompt);
 	container.appendChild(quantField);
+
+	let buttonCont = document.createElement("div");
+	let enterButton = document.createElement("button");
+	enterButton.innerHTML = "Enter";
+	
+	buttonCont.appendChild(enterButton);
+	
+	enter.addEventListener("click", submitData);
+
+	container.appendChild(buttonCont);
 } else {
 
 }
