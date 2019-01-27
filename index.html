@@ -18,8 +18,10 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js" ></script>
     <script type="text/javascript" src="src/database.js"></script>
-  	<script type="text/javascript" src="src/loadInitial.js" defer></script>
-    <script type="text/javascript" src="src/user.js" defer></script>
+  	<script type="text/javascript" src="src/user.js" defer></script>
+    <script type="text/javascript" src="src/loadInitial.js" defer></script>
+    <script type="text/javascript" src="src/loginSignup.js" defer></script>
+    <script type="text/javascript" src="src/orders.js" defer></script>
     <script type="text/javascript" src="src/settings.js" defer></script>
   	<script type="text/javascript" src="src/swipePost.js" defer></script>
     <script>
@@ -44,11 +46,11 @@
       <div id = "loginSignup"></div>
     </section>
   	<section class = "screens">
-	  	<div id = "swipePost"></div>
+	  	<div id = "swipePost" class="inactive"></div>
 	  	<div id = "orders" class = "inactive"></div>
 	  	<div id = "settings" class = "inactive"></div>
 	</section>
-  	<section class = "menu">
+  	<section class = "menu" class="inactive">
   		<button id = "swipePostButton">New Order</button>
   		<button id = "ordersButton">My Orders</button>
   		<button id = "settingsButton">Update Profile</button>
