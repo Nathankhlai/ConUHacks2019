@@ -3,7 +3,7 @@
 
 let containerElement = document.querySelector("#loginSignup");
 
-containerElement.innerHTML='<p>Email:</p> <input type="text" id="email" placeholder="paul.shen@ymail.com"> <p>Password:</p> <input type="password" id="password" placeholder="123456"><br><button id=loginButton>Login</button><br><p id="small">No account? Sign up here!</p>';
+containerElement.innerHTML='<p>Email:</p> <input type="text" id="email" placeholder="paul.shen@ymail.com" value ="paul.shen@ymail.com"> <p>Password:</p> <input type="password" id="password" placeholder="123456" value="123456"><br><button id=loginButton>Login</button><br><p id="small">No account? Sign up here!</p>';
 
 let email1 = document.querySelector("#email");
 let password = document.querySelector("#password");
@@ -44,7 +44,7 @@ function authorize () {
         }
       
 });
-    
+
 }
 
 

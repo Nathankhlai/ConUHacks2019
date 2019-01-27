@@ -99,13 +99,18 @@ function dragEnd(event) {
 		index = index + 1;
 		
 		let container = document.querySelector("#swipePost");
+		orders.innerHTML += "Location: " + 
 		container.innerHTML="";
 		container.appendChild(orders[index]);
 		console.log("index: " + index);
 		
 		// swipe right
 		if (event.clientX - origin[0] > 150){
-
+			let item = document.querySelector("#nameField").value;
+		    let quantity = document.querySelector("#quantField").value;
+		    let temp = {item: quantity};
+		    var setDoc = db.collection('Receivers').doc(uid).set(temp);
+		    toOrders();
 			// ***** Updates database
 			// firebase.database().ref('/users/' + app.userId).child('/swipe-right').push(people[database.index-1].idNum);
 			// firebase.database().ref('/users/' + people[database.index-1].idNum + '/swipe-right').once('value').then(function(snapshot) {

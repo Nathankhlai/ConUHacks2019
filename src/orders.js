@@ -1,35 +1,5 @@
 var orders = [];
 var currentOrders = [
-	{
-		donor: "Loblaws",
-		product: "carrots",
-		quantity: "30 pounds"
-	},
-	{
-		donor: "Nofrills",
-		product: "lentils",
-		quantity: "30 cans"
-	},
-	{
-		donor: "Ally's Kitchen",
-		product: "celery",
-		quantity: "10 pounds"
-	},
-	{
-		donor: "Ms Housewife",
-		product: "uncooked rice",
-		quantity: "30 pounds"
-	},
-	{
-		donor: "Kalbi House",
-		product: "cabbage",
-		quantity: "50 pounds"
-	},
-	{
-		donor: "Costco",
-		product: "100 pack granola bars",
-		quantity: "10 boxes"
-	}
 ];
 
 
@@ -48,12 +18,17 @@ for (let i = 0; i < currentOrders.length; i ++) {
 }
 
 
+
 function queryOrders () {
-    db.collection("cities").get().then(function(querySnapshot) {
+    db.collection("Donors").get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
+        	// console.log(doc.data.name);
+        	currentOrders.push({donor:doc.data().name, product:doc.data().product, quantity:doc.data().quantity});
             // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
+            // console.log(doc.id, " => ", doc.data());
         });
     });
 
 }
+
+queryOrders();
