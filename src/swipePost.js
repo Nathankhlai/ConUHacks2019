@@ -6,7 +6,7 @@ document.querySelector("#ordersButton").addEventListener("click", toOrders);
 let container = document.querySelector("#swipePost");
 
 
-if (current.userType === "donor") {
+if (true) {
 	container.innerHTML = "";
 
 	let namePrompt = document.createElement("p");
@@ -34,17 +34,13 @@ if (current.userType === "donor") {
 
 	buttonCont.appendChild(enterButton);
 
-	enterButton.addEventListener("click", submitData);
+	enterButton.addEventListener("click", submitOrderData);
 
 	container.appendChild(buttonCont);
-
-// If acceptor
 } else {
-	
 	// Stores offers turned into dom elements
 	let offers = [];
 
 	// ***** Loop through users, then their offers
-		offers.push(new Offer(donor, item, quantity,location));
-		
+	offers.push(new Offer(donor, item, quantity,location));
 }

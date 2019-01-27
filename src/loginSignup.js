@@ -1,10 +1,50 @@
-var current = new User ("donor", "storeName", "location", ["orders","orders2"]);
+// var current = new User ("donor", "storeName", "location", ["orders","orders2"]);////
+// var current;
 
 let containerElement = document.querySelector("#loginSignup");
 
-containerElement.innerHTML='<p>Username:</p> <input type="text" id="username"> <p>Password:</p> <input type="text" id="password"><br><button id=loginButton>Login</button><br><p id="small">No account? Sign up here!</p>';
+containerElement.innerHTML='<p>Username:</p> <input type="text" id="email"> <p>Password:</p> <input type="password" id="password"><br><button id=loginButton>Login</button><br><p id="small">No account? Sign up here!</p>';
 
-document.querySelector("#loginButton").addEventListener('click', toSwipePost);
-
-let username = document.querySelector("#username");
+let email1 = document.querySelector("#email");
 let password = document.querySelector("#password");
+
+document.querySelector("#loginButton").addEventListener('click', authorize);
+
+function authorize () {
+    firebase.auth().signInWithEmailAndPassword (email1.value, password.value).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+    });
+
+    console.log("this kinda works")
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            displayName = user.displayName;
+            email = user.email;
+            emailVerified = user.emailVerified;
+            photoURL = user.photoURL;
+            isAnonymous = user.isAnonymous;
+            uid = user.uid;
+            providerData = user.providerData;
+            // ...
+        } else {
+            // User is signed out.
+            // ...
+        }
+        console.log("this works")
+    });
+}
+
+
+// // User sign up
+// firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     // ...
+// });
+

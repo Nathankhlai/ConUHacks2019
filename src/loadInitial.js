@@ -1,3 +1,17 @@
+var displayName;
+var email;
+var emailVerified;
+var photoURL;
+var isAnonymous;
+var uid
+var providerData;
+
+firebase.initializeApp({
+	apiKey: "AIzaSyAc14wfNVZScC-9u1YPqwEfCC09v3KE49Q",
+	authDomain: "conuhacks2019-d7b13.firebaseapp.com",
+	projectId: "conuhacks2019-d7b13",
+});
+
 function hideAll () {
 
 	if (document.querySelector("#loginSignup").classList.contains("inactive") == false) {
@@ -17,22 +31,6 @@ function hideAll () {
 	}
 
 }
-
-
-function submitData () {
-	//need to get the company/ store name here
-	let name = current.name;
-	let item = document.querySelector("#nameField").value;
-	let quantity = document.querySelector("#quantField").value;
-	var setDoc = db.collection('Donors').doc("hi").set(docData);
-	console.log(setDoc);
-	toOrders();
-
-
-	// write item name to database
-	// write item quantity to databases
-}
-
 
 function toSwipePost (event) {
 	hideAll();

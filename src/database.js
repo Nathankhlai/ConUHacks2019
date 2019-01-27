@@ -19,35 +19,55 @@
 // <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>;
 
 
-
-
-var docData = {
-   stringExample: "Hello world!",
-   booleanExample: true,
-   numberExample: 3.14159265,
-   dateExample: new Date("December 10, 1815"),
-   arrayExample: [5, true, "hello"],
-   nullExample: null,
-   objectExample: {
-       a: 5,
-       b: {
-           nested: "foo"
-       }
-   }
-};
-
-
-firebase.initializeApp({
- apiKey: "AIzaSyAc14wfNVZScC-9u1YPqwEfCC09v3KE49Q",
-        authDomain: "conuhacks2019-d7b13.firebaseapp.com",
-//         databaseURL: "https://conuhacks2019-d7b13.firebaseio.com",
-        projectId: "conuhacks2019-d7b13",
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        // ...
+    } else {
+        // User is signed out.
+        // ...
+    }
 });
 
-// User sign up
-firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // ...
-});
+
+function submitOrderData () {
+    //need to get the company/store name here
+    let name = current.name;
+    let item = document.querySelector("#nameField").value;
+    let quantity = document.querySelector("#quantField").value;
+    let temp = [item, quantity];
+    // var setDoc = db.collection('Receivers').doc((firebase.auth().currentUser).uid).set(temp);
+    console.log(((firebase.auth().currentUser).uid));
+toOrders();
+
+
+// write item name to database
+// write item quantity to databases
+}
+
+//
+// var docData = {
+//     stringExample: "Hello world!",
+//     booleanExample: true,
+//     numberExample: 3.14159265,
+//     dateExample: new Date("December 10, 1815"),
+//     arrayExample: [5, true, "hello"],
+//     nullExample: null,
+//     objectExample: {
+//         a: 5,
+//         b: {
+//             nested: "foo"
+//         }
+//     }
+// };
+
+
+
+
