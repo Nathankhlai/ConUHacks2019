@@ -1,9 +1,10 @@
 // Might not need this class if we can properly stringify from database
 
 class User {
-	constructor (userType, name, location) {
+	constructor (userType, name, location, orders) {
 		this.userType = userType;
 		this.name = name;
 		this.location = location;
+		this.orders = orders;
 	}
 }
