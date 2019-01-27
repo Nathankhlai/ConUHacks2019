@@ -41,7 +41,7 @@ if (current.userType === "donor") {
 	let buttonCont = document.createElement("div");
 	let enterButton = document.createElement("button");
 	enterButton.innerHTML = "Enter";
-	
+
 	buttonCont.appendChild(enterButton);
 
 	enterButton.addEventListener("click", submitData);
