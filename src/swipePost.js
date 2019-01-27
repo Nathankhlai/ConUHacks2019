@@ -1,9 +1,7 @@
-// Pulls information from database
-var current = new User ("donor", "storeName", "location");
-
 document.querySelector("#swipePostButton").addEventListener("click", toSwipePost);
 document.querySelector("#settingsButton").addEventListener("click", toSettings);
 document.querySelector("#ordersButton").addEventListener("click", toOrders);
+
 // Get current user from login
 let container = document.querySelector("#swipePost");
 

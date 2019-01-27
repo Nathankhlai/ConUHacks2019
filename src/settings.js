@@ -1,11 +1,8 @@
 // Get current user from login
 let contain = document.querySelector("#settings");
 
-// Pulls information from database
-let curren = new User ("donor", "location");
 
-if (curren.userType === "donor") {
-	contain.innerHTML = "";
+contain.innerHTML = "";
 
 let usernamePrompt = document.createElement("p");
 usernamePrompt.appendChild(document.createTextNode("Username"));
@@ -53,6 +50,3 @@ buttonCont.appendChild(enterButton);
 // enterButton.addEventListener("click", submitData);
 
 contain.appendChild(buttonCont);
-} else {
-
-}

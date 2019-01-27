@@ -4,24 +4,30 @@ section h3 {
 }
 
 body {
-	background-color: rgb(5, 188, 212);
+	background-color: rgb(216, 178, 255);
 	overflow-y: scroll;
 }
 
 button {
 	font-size: 1em;
+	margin-top: 10px;
+}
 
+section {
+	text-align: center;
 }
 
 .order {
-	background-color: rgba(255, 34, 114, 0.21);
+	background-color: rgb(255, 107, 34);
+	padding: 10px;
+	margin-bottom: 4%;
+	margin-top: 4%;
+	color: white;
 }
 
 .menu{
 	display: flex;
 	justify-content: space-between;
-	margin-top: 10px;
-	bottom: 0;
 	position: fixed;
 	bottom: 2%;
 	width: 96%;
@@ -35,4 +41,20 @@ button {
 
 .inactive {
 	display: none !important;
+}
+
+
+#orders {
+	overflow-y: scroll;
+}
+
+#loginButton {
+	border:unset;
+	margin-top: 3%;
+}
+
+#small {
+	text-decoration-line: underline;
+	color: blue;
+	font-size: 0.75em;
 }
