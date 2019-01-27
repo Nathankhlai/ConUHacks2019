@@ -37,6 +37,14 @@ if (current.userType === "donor") {
 	enterButton.addEventListener("click", submitData);
 
 	container.appendChild(buttonCont);
-} else {
 
+// If acceptor
+} else {
+	
+	// Stores offers turned into dom elements
+	let offers = [];
+
+	// ***** Loop through users, then their offers
+		offers.push(new Offer(donor, item, quantity,location));
+		
 }
