@@ -1,5 +1,9 @@
 function hideAll () {
 
+	if (document.querySelector("#loginSignup").classList.contains("inactive") == false) {
+		document.querySelector("#loginSignup").classList.add("inactive");
+	}
+
 	if (document.querySelector("#swipePost").classList.contains("inactive") == false) {
 		document.querySelector("#swipePost").classList.add("inactive");
 	}
@@ -46,6 +50,6 @@ function toSettings (event) {
 
 function toOrders(event) {
 	hideAll();
-	document.body.style.backgroundColor = "rgb(203, 138, 243)";
+	document.body.style.backgroundColor = "rgb(247, 240, 152)";
 	document.querySelector("#orders").classList.remove("inactive");
 }
