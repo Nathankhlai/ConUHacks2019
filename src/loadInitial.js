@@ -5,6 +5,7 @@ var photoURL;
 var isAnonymous;
 var uid;
 var providerData;
+var currentStatus;
 var index = 0;
 
 firebase.initializeApp({
@@ -99,7 +100,7 @@ function dragEnd(event) {
 		index = index + 1;
 		
 		let container = document.querySelector("#swipePost");
-		orders.innerHTML += "Location: " + 
+		orders[index].innerHTML += "Location: ";
 		container.innerHTML="";
 		container.appendChild(orders[index]);
 		console.log("index: " + index);
