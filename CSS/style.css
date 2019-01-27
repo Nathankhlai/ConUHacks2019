@@ -34,8 +34,10 @@ select {
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
-	bottom: 2%;
-	width: 96%;
+	left: 0;
+	bottom: 0;
+	padding-bottom: 2%;
+	width: 100%;
 }
 
 .nonMenu {

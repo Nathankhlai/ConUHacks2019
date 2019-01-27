@@ -5,8 +5,9 @@ document.querySelector("#ordersButton").addEventListener("click", toOrders);
 // Get current user from login
 let container = document.querySelector("#swipePost");
 
+let test = true;
 
-if (true) {
+if (test) {
 	container.innerHTML = "";
 
 	let namePrompt = document.createElement("p");
@@ -38,9 +39,17 @@ if (true) {
 
 	container.appendChild(buttonCont);
 } else {
-	// Stores offers turned into dom elements
-	let offers = [];
+	container.innerHTML = "";
+	container.appendChild(orders[index]);
 
-	// ***** Loop through users, then their offers
-	offers.push(new Offer(donor, item, quantity,location));
+	container.addEventListener('pointerdown', dragStart);
+	container.addEventListener('pointermove', dragMove);
+    container.addEventListener('pointerup', dragEnd);
+    container.appendChild(item);
+
+	// // Stores offers turned into dom elements
+	// let offers = [];
+
+	// // ***** Loop through users, then their offers
+	// offers.push(new Offer(donor, item, quantity,location));
 }
