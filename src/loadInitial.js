@@ -5,7 +5,7 @@ var photoURL;
 var isAnonymous;
 var uid;
 var providerData;
-var currentStatus;
+var currentStatus = "Donor";
 var index = 0;
 
 firebase.initializeApp({
@@ -109,30 +109,9 @@ function dragEnd(event) {
 		if (event.clientX - origin[0] > 150){
 			let item = document.querySelector("#nameField").value;
 		    let quantity = document.querySelector("#quantField").value;
-		    let temp = {item: quantity};
+		    let temp = {product:item,quantity:quantity};
 		    var setDoc = db.collection('Receivers').doc(uid).set(temp);
 		    toOrders();
-			// ***** Updates database
-			// firebase.database().ref('/users/' + app.userId).child('/swipe-right').push(people[database.index-1].idNum);
-			// firebase.database().ref('/users/' + people[database.index-1].idNum + '/swipe-right').once('value').then(function(snapshot) {
-               // let mutual = false
-               // let vals = snapshot.val();
-               // for (i in vals) {
-               //         if (vals[i] == app.userId) {
-               //     		    console.log(snapshot[i]);
-               //              mutual = true;
-               //         }
-               // }
-
-               // if (mutual==true) {
-               //     firebase.database().ref('/users/' + app.userId ).child('matches').push(people[database.index-1].idNum);
-               //     firebase.database().ref('/users/' + people[database.index-1].idNum ).child('matched').push(app.userId);
-               // }
-            // });
-			
-			// ***** Change database to mark a match
-			// CHeck if thet like you
-			// If yes open conversation
 		// Swipe left
 		} else if (event.clientX - origin[0] < -150) {
 		  	// ***** Change database to mark a match

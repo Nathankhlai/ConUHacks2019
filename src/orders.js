@@ -3,19 +3,19 @@ var currentOrders = [
 ];
 
 
-for (let i = 0; i < currentOrders.length; i ++) {
-	let container = document.querySelector("#orders");
-	let item = document.createElement("div");
-	item.classList.add("order");
-	let textNode = document.createElement("p");
-	textNode.innerHTML = "<strong>Donor Name:</strong> " + currentOrders[i].donor;
-	textNode.innerHTML += "<br><strong>Product:</strong> " + currentOrders[i].product;
-	textNode.innerHTML += "<br><strong>Quantity:</strong> " + currentOrders[i].quantity;
-	item.appendChild(textNode);
-	item.style.touchAction = "none";
-	container.appendChild(item);
-    orders.push(item);
-}
+// for (let i = 0; i < currentOrders.length; i ++) {
+// 	let container = document.querySelector("#orders");
+// 	let item = document.createElement("div");
+// 	item.classList.add("order");
+// 	let textNode = document.createElement("p");
+// 	textNode.innerHTML = "<strong>Donor Name:</strong> " + currentOrders[i].donor;
+// 	textNode.innerHTML += "<br><strong>Product:</strong> " + currentOrders[i].product;
+// 	textNode.innerHTML += "<br><strong>Quantity:</strong> " + currentOrders[i].quantity;
+// 	item.appendChild(textNode);
+// 	item.style.touchAction = "none";
+// 	container.appendChild(item);
+//     orders.push(item);
+// }
 
 
 

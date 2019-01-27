@@ -38,6 +38,14 @@ function authorize () {
 			toSwipePost();
 			document.querySelector(".menu").classList.remove("inactive");
 			
+
+            if (uid === "VmTxVrL4gCe0mnWEVt5dgP84Qs32") {
+                currentStatus = "Receiver"
+
+            } else if ( uid === "KhvN4BZ4MWQrJFhsL9Q1f9NI3tK2") {
+                currentStatus = "Donor"
+
+            }
         } else {
             // User is signed out.
             // ...

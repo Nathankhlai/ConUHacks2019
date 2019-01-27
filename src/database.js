@@ -41,7 +41,7 @@ function submitOrderData () {
    //need to get the company/store name here
    let item = document.querySelector("#nameField").value;
    let quantity = document.querySelector("#quantField").value;
-   let temp = {item: quantity};
+   let temp = {product:item, quantity: quantity};
    var setDoc = db.collection('Receivers').doc(uid).set(temp);
    toOrders();
 

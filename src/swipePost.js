@@ -6,8 +6,8 @@ document.querySelector("#ordersButton").addEventListener("click", toOrders);
 let container = document.querySelector("#swipePost");
 
 let test = true;
-
-if (test) {
+// currentStatus = "asd";
+if (currentStatus === "Donor") {
 	container.innerHTML = "";
 
 	let namePrompt = document.createElement("p");
@@ -40,8 +40,9 @@ if (test) {
 	container.appendChild(buttonCont);
 } else {
 	container.innerHTML = "";
-	container.appendChild(orders[index]);
-
+	let item = document.createElement("div");
+	// item.appendChild(orders[index]);
+	item.innerHTML = orders[index];
 	container.addEventListener('pointerdown', dragStart);
 	container.addEventListener('pointermove', dragMove);
     container.addEventListener('pointerup', dragEnd);
