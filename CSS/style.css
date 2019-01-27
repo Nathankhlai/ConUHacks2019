@@ -13,7 +13,7 @@ button {
 
 }
 
-.menu {
+.menu{
 	display: flex;
 	justify-content: space-between;
 	margin-top: 10px;
@@ -23,7 +23,12 @@ button {
 	width: 96%;
 }
 
+.nonMenu {
+	border: unset;
+	margin-top: 2%;
+}
+
 
 .inactive {
-	display: inactive !important;
+	display: none !important;
 }
