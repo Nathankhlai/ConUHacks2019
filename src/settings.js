@@ -46,10 +46,11 @@ contain.appendChild(recdonField);
 let buttonCont = document.createElement("div");
 let enterButton = document.createElement("button");
 enterButton.innerHTML = "Enter";
+enterButton.classList.add("nonMenu");
 
 buttonCont.appendChild(enterButton);
 
-enterButton.addEventListener("click", submitData);
+// enterButton.addEventListener("click", submitData);
 
 contain.appendChild(buttonCont);
 } else {
