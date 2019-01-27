@@ -19,8 +19,11 @@ section {
 
 select {
 	border: 2px;
-	/*border-color: black;*/
-	
+	/*border-color: black;*/	
+}
+
+img {
+	max-width: 80%;
 }
 .order {
 	background-color: rgb(255, 107, 34);
