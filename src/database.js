@@ -18,10 +18,10 @@ var db = firebase.firestore();
 // <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>;
 // <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>;
 
-
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        // User is signed in.
+        // User is signed in.  
+        
         var displayName = user.displayName;
         var email = user.email;
         var emailVerified = user.emailVerified;
@@ -64,5 +64,11 @@ function submitOrderData () {
 // };
 
 
+
+firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}).catch(function(error) {
+  // An error happened.
+});
 
 

@@ -5,7 +5,7 @@ let contain = document.querySelector("#settings");
 contain.innerHTML = "";
 
 let usernamePrompt = document.createElement("p");
-usernamePrompt.appendChild(document.createTextNode("Username"));
+usernamePrompt.appendChild(document.createTextNode("Email"));
 let usernameField = document.createElement("input");
 usernameField.setAttribute("type","text");
 usernameField.id = "usernameField";
@@ -42,11 +42,33 @@ contain.appendChild(recdonField);
 
 let buttonCont = document.createElement("div");
 let enterButton = document.createElement("button");
-enterButton.innerHTML = "Enter";
+enterButton.innerHTML = "Update Info";
 enterButton.classList.add("nonMenu");
 
 buttonCont.appendChild(enterButton);
 
-// enterButton.addEventListener("click", submitData);
+enterButton.addEventListener("click", updateData);
 
 contain.appendChild(buttonCont);
+
+function updateData () {
+	var user = firebase.auth().currentUser;
+	let newEmail = document.querySelector("#usernameField").value;
+	let newPassword = document.querySelector("#passwordField").value;
+	let newLocation = document.querySelector("#locationField").value;
+	let newStatus = document.querySelector("#recdonField").value;
+	
+
+	user.updateEmail(newEmail).then(function() {
+	  // Update successful.
+	}).catch(function(error) {
+	  // An error happened.
+	});
+
+	user.updatePassword(newPassword).then(function() {
+	  // Update successful.
+	}).catch(function(error) {
+	  // An error happened.
+	});
+}
+
