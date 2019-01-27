@@ -31,12 +31,14 @@ function authorize () {
             isAnonymous = user.isAnonymous;
             uid = user.uid;
             providerData = user.providerData;
+
+            console.log(uid);
             // ...
         } else {
             // User is signed out.
             // ...
         }
-        console.log("this works")
+       
     });
     toSwipePost();
     document.querySelector(".menu").classList.remove("inactive");
