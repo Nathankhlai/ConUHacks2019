@@ -3,12 +3,13 @@
 
 let containerElement = document.querySelector("#loginSignup");
 
-containerElement.innerHTML='<p>Username:</p> <input type="text" id="email"> <p>Password:</p> <input type="password" id="password"><br><button id=loginButton>Login</button><br><p id="small">No account? Sign up here!</p>';
+containerElement.innerHTML='<p>Email:</p> <input type="text" id="email"> <p>Password:</p> <input type="password" id="password"><br><button id=loginButton>Login</button><br><p id="small">No account? Sign up here!</p>';
 
 let email1 = document.querySelector("#email");
 let password = document.querySelector("#password");
 
 document.querySelector("#loginButton").addEventListener('click', authorize);
+document.querySelector("#small").addEventListener('click', signUpPage);
 
 function authorize () {
     firebase.auth().signInWithEmailAndPassword (email1.value, password.value).catch(function(error) {
@@ -37,6 +38,8 @@ function authorize () {
         }
         console.log("this works")
     });
+    toSwipePost();
+    document.querySelector(".menu").classList.remove("inactive");
 }
 
 

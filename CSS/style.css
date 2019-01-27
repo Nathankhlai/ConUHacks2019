@@ -17,6 +17,11 @@ section {
 	text-align: center;
 }
 
+select {
+	border: 2px;
+	/*border-color: black;*/
+	
+}
 .order {
 	background-color: rgb(255, 107, 34);
 	padding: 10px;

@@ -8,12 +8,12 @@
 //         messagingSenderId: "992278114219"
 //       };
 //       firebase.initializeApp(config);
-// // const admin = require('firebase-admin');
-// // const functions = require('firebase-functions');
+// const admin = require('firebase-admin');
+// const functions = require('firebase-functions');
 
-// // var db = firebase.database();
-// var db = firebase.firestore();
-// // admin.initializeApp(functions.config().firebase);
+// var db = firebase.database();
+var db = firebase.firestore();
+// admin.initializeApp(functions.config().firebase);
 
 // <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>;
 // <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>;
@@ -38,18 +38,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 function submitOrderData () {
-    //need to get the company/store name here
-    let name = current.name;
-    let item = document.querySelector("#nameField").value;
-    let quantity = document.querySelector("#quantField").value;
-    let temp = [item, quantity];
-    // var setDoc = db.collection('Receivers').doc((firebase.auth().currentUser).uid).set(temp);
-    console.log(((firebase.auth().currentUser).uid));
-toOrders();
+   //need to get the company/store name here
+   let item = document.querySelector("#nameField").value;
+   let quantity = document.querySelector("#quantField").value;
+   let temp = [item, quantity];
+   var setDoc = db.collection('Receivers').doc(uid).set(temp);
+   toOrders();
 
-
-// write item name to database
-// write item quantity to databases
 }
 
 //
