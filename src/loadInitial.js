@@ -1,10 +1,6 @@
-function submitData () {
-	//need to get the company/ store name here
-	let item = document.querySelector("#nameField").value;
-	let quantity = document.querySelector("#quantityField").value;
-	var setDoc = db.collection('Donor').doc('insert store name here').set(item + ';' + quantity);
+// const admin = require('firebase-admin');
+// const functions = require('firebase-functions');
 
+// admin.initializeApp(functions.config().firebase);
 
-	write item name to database
-	write item quantity to databases
-}
+// var db = admin.firestore();
