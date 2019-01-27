@@ -28,10 +28,10 @@ if (current.userType === "donor") {
 	let buttonCont = document.createElement("div");
 	let enterButton = document.createElement("button");
 	enterButton.innerHTML = "Enter";
-	
+
 	buttonCont.appendChild(enterButton);
-	
-	enter.addEventListener("click", submitData);
+
+	enterButton.addEventListener("click", submitData);
 
 	container.appendChild(buttonCont);
 } else {
