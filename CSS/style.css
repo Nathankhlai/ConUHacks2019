@@ -13,6 +13,10 @@ button {
 
 }
 
+.order {
+	background-color: rgba(255, 34, 114, 0.21);
+}
+
 .menu{
 	display: flex;
 	justify-content: space-between;
